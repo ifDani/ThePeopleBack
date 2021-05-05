@@ -23,7 +23,7 @@ app.use(express.urlencoded({
 connection.then(() => {
     console.log('Conectado a la base de datos...')
 
-    app.listen(3000, () => {
+    app.listen(process.env.PORT || 3000, () => {
         console.log("Servidor iniciado")
     })
 }).catch(function (err) {
